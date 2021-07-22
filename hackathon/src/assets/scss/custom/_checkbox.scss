@@ -1,0 +1,73 @@
+/* Checkbox */
+
+.ckbox {
+  font-weight: normal;
+  position: relative;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0;
+
+  span {
+    padding-left: 15px;
+
+    &:empty {
+      float: left;
+    }
+
+    &:before, &:after {
+      line-height: 18px;
+      position: absolute;
+    }
+
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border: 1px solid $gray-500;
+      top: 1px;
+      left: 0;
+    }
+
+    &:after {
+      top: 1px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+      background-size: 65%;
+      background-repeat: no-repeat;
+      background-position: 55% 45%;
+      background-color: $primary;
+      line-height: 17px;
+      display: none;
+    }
+
+    &:empty {
+      padding-left: 0;
+      width: 3px;
+    }
+  }
+
+  input[type='checkbox'] {
+    opacity: 0;
+    margin: 0;
+
+    &:checked + span:after {
+      display: block;
+    }
+
+    &[disabled] + span {
+      opacity: .75;
+
+      &:before, &:after {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.ckbox-inline {
+  display: inline-block;
+}

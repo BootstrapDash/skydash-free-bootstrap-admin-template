@@ -1,0 +1,301 @@
+.accordion {
+	> .card {
+	  overflow: hidden;
+  
+	  &:not(:first-of-type) {
+		.card-header:first-child {
+		  border-radius: 0;
+		}
+  
+		&:not(:last-of-type) {
+		  border-bottom: 0;
+		  border-radius: 0;
+		}
+	  }
+  
+	  &:first-of-type {
+		border-bottom: 0;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	  }
+  
+	  &:last-of-type {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	  }
+  
+	  .card-header {
+		margin-bottom: -1px;
+	  }
+	}
+  
+	.card {
+	  border-width: 0;
+  
+	  + .card {
+		margin-top: 1px;
+	  }
+	}
+  
+	.card-header {
+	  padding: 0;
+	  background-color: transparent;
+	  font-weight: 500;
+  
+	  a {
+		display: block;
+		padding: 14px 20px;
+		color: $gray-900;
+		position: relative;
+		font-weight: 500;
+		font-size: 14px;
+		background-color: $gray-100;
+  
+		&:hover, &:focus {
+		  color: $gray-900;
+		}
+  
+		&.collapsed {
+		  color: $gray-700;
+		  background-color: $gray-100;
+		  border-bottom-color: transparent;
+  
+		  &:hover, &:focus {
+			color: $gray-900;
+			background-color: $gray-200;
+		  }
+		}
+	  }
+	}
+  
+	.card-body {
+	  padding: 0 20px 20px;
+	  background-color: $gray-100;
+	  transition: none;
+	}
+  }
+  
+  .card .card{
+  	box-shadow:none !important;
+  }
+  .accordion > .card{
+    border:0 !important;
+  }
+  /* ###### 3.1 Accordion ###### */
+  
+  .accordion-indigo {
+	.card {
+	  border-color: $primary;
+	}
+  
+	.card-header a {
+	  color: $primary;
+  
+	  &:hover, &:focus {
+		color: $primary;
+	  }
+  
+	  &.collapsed {
+		background-color: $primary;
+		color: $white-8;
+		font-weight: 500;
+		letter-spacing: -.1px;
+  
+		&:hover, &:focus {
+		  background-color: #452efa;
+		  color: $white;
+		}
+	  }
+	}
+  }
+  
+  .accordion-blue {
+	.card {
+	  border-color: $primary;
+	}
+  
+	.card-header a {
+	  color: $primary;
+  
+	  &:hover, &:focus {
+		color: $primary;
+	  }
+  
+	  &.collapsed {
+		background-color: $primary;
+		color: $white-8;
+		font-weight: 500;
+		letter-spacing: -.1px;
+  
+		&:hover, &:focus {
+		  background-color: #1a53ff;
+		  color: $white;
+		}
+	  }
+	}
+  }
+  
+  .accordion-dark {
+	.card {
+	  border-color: $gray-900;
+	}
+  
+	.card-header a {
+	  color: $gray-900;
+  
+	  &:hover, &:focus {
+		color: $gray-900;
+	  }
+  
+	  &.collapsed {
+		background-color: $gray-900;
+		color: $white-8;
+		font-weight: 500;
+		letter-spacing: -.1px;
+  
+		&:hover, &:focus {
+		  background-color: #141c2b;
+		  color: $white;
+		}
+	  }
+	}
+  }
+  
+  .accordion-gray {
+	.card {
+	  border-color: $gray-600;
+	}
+  
+	.card-header a {
+	  color: $gray-600;
+  
+	  &:hover, &:focus {
+		color: $gray-600;
+	  }
+  
+	  &.collapsed {
+		background-color: $gray-600;
+		color: $white-8;
+		font-weight: 500;
+		letter-spacing: -.1px;
+  
+		&:hover, &:focus {
+		  background-color: #6a7a96;
+		  color: $white;
+		}
+	  }
+	}
+  }
+  
+  /* ############### CUSTOM ELEMENT STYLES ############### */
+  
+  .main-accordion {
+	.accordion-item {
+	  background-color: $gray-100;
+	  border: 1px solid #dee2ef;
+	  position: relative;
+	  transition: all 0.2s ease-in-out;
+  
+	  &:hover, &:focus {
+		cursor: pointer;
+		background-color: #f1f2f6;
+		border-color: #bcc4de;
+		z-index: 4;
+	  }
+  
+	  &.active {
+		background-color: $white;
+		z-index: 5;
+		border-color: #bcc4de;
+  
+		.accordion-title {
+		  color: $primary;
+		}
+  
+		.accordion-body {
+		  display: block;
+		}
+	  }
+  
+	  + .accordion-item {
+		margin-top: -1px;
+	  }
+	}
+  
+	.accordion-header {
+	  display: flex;
+	  align-items: center;
+	  padding: 15px 20px;
+	}
+  
+	.accordion-title {
+	  font-weight: 700;
+	  color: $default-color;
+	  margin: 0;
+	  transition: all 0.2s ease-in-out;
+	}
+  
+	.accordion-body {
+	  display: none;
+	  padding: 0 20px 20px;
+	}
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+	.main-accordion .accordion-item {
+	  transition: none;
+	}
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+	.main-accordion .accordion-title {
+	  transition: none;
+	}
+  }
+  
+.panel-heading1.bg-primary .panel-title1 a {
+  display: block;
+  color: #6a7882;
+}
+
+.panel-title1 {
+  margin-bottom: 0;
+}
+
+.panel-heading1.bg-primary .panel-title1 a {
+  display: block;
+  color: $white;
+}
+
+.panel-title1 a {
+  display: block;
+  color: $white;
+  padding: 15px;
+  position: relative;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.panel-heading1 a.collapsed:before {
+  content: "\e9af";
+  position: absolute;
+  font-family: 'feather' !important;
+  left: 10px;
+  top: 12px;
+  font-size: 20px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.accor {
+  &.bg-primary h4 a {
+    color: $white;
+  }
+
+  h4 a {
+    padding: .75rem 1.25rem;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(154, 180, 202, 0.16);
+  }
+}

@@ -1,0 +1,308 @@
+/* ###### 4.1 Datatables ###### */
+
+table.dataTable {
+  border: 1px solid $border;
+  thead {
+    th, td {
+      border-top-width: 0;
+      border-bottom-width: 0;
+      padding: 8px 10px;
+      font-weight: 700;
+      font-size: 12px;
+      color: $gray-900;
+    }
+
+    .sorting_asc, .sorting_desc {
+      background-image: none;
+      background-color: $gray-100;
+      position: relative;
+    }
+
+    .sorting_asc::after, .sorting_desc::after {
+      font-family: 'Ionicons';
+      font-size: 11px;
+      position: absolute;
+      line-height: 0;
+      top: 50%;
+      right: 10px;
+    }
+
+    .sorting_asc::after {
+      content: '\f3d8';
+    }
+
+    .sorting_desc::after {
+      content: '\f3d0';
+    }
+
+    .sorting {
+      background-image: none;
+      position: relative;
+
+      &::before, &::after {
+        font-family: 'Ionicons';
+        font-size: 11px;
+        position: absolute;
+        line-height: 0;
+        right: 10px;
+      }
+
+      &::before {
+        content: '\f3d8';
+        top: 40%;
+      }
+
+      &::after {
+        content: '\f3d0';
+        top: 60%;
+      }
+    }
+  }
+
+  tbody td.sorting_1 {
+    background-color: $gray-100;
+  }
+
+  &.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before {
+    top: 9.5px;
+    left: 7px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0;
+    box-shadow: none;
+    background-color: $gray-300;
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-500;
+  }
+
+  > tbody > tr.child {
+    ul.dtr-details {
+      display: block;
+    }
+
+    span.dtr-title {
+      font-weight: 500;
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .dataTables_length {
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .select2-container--default {
+      margin-right: 5px;
+
+      .select2-selection--single {
+        height: 32px;
+        border-color: $gray-300;
+        border-radius: 3px;
+
+        .select2-selection__rendered {
+          line-height: 32px;
+        }
+
+        .select2-selection__arrow {
+          height: 30px;
+
+          b {
+            border-top-color: $gray-500;
+          }
+        }
+      }
+    }
+  }
+
+  .dataTables_filter {
+    text-align: left;
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    input {
+      margin-left: 0;
+      border: 1px solid $border;
+      padding: 5px 10px;
+      line-height: 1.539;
+      color: $default-color;
+      border-radius: 3px;
+      width: 100%;
+
+      &::placeholder {
+        color: $gray-500;
+      }
+    }
+  }
+
+  .dataTables_info {
+    margin-top: 19px !important;
+    padding: 0 !important;
+    text-align: left;
+  }
+
+  .dataTables_paginate {
+    margin-top: 15px !important;
+    padding-top: 0;
+    margin-top: 15px;
+    text-align: left;
+
+    .paginate_button {
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 1px;
+      transition: all 0.2s ease-in-out;
+
+      + .paginate_button {
+        margin-left: 3px;
+      }
+
+      &.disabled {
+        background-color: transparent;
+        color: $gray-300  !important;
+
+        &:hover, &:focus {
+          background-color: #eceff3;
+          color: $gray-300  !important;
+        }
+      }
+
+      &.previous {
+        margin-right: 3px;
+      }
+
+      &.next {
+        margin-left: 3px;
+      }
+
+      &:hover, &:focus {
+        border: 0;
+        background-image: none;
+        background-color: transparent;
+        color: $default-color !important;
+      }
+
+      &.current {
+        border: 0;
+        background-image: none;
+        background-color: $primary;
+        color: $white !important;
+
+        &:hover, &:focus {
+          border: 0;
+          background-image: none;
+          background-color: $primary;
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .dataTables_wrapper .dataTables_length {
+    float: left;
+  }
+}
+
+@media (min-width: 576px) {
+  .dataTables_wrapper .dataTables_filter {
+    float: right;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .dataTables_wrapper .dataTables_filter input {
+    width: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .dataTables_wrapper .dataTables_info {
+    float: left;
+  }
+}
+
+@media (min-width: 576px) {
+  .dataTables_wrapper .dataTables_paginate {
+    float: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    transition: none;
+  }
+}
+
+@media (max-width: 575px) {
+  div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: -12px;
+  }
+}
+
+.table.dataTable thead .sorting:before {
+  display: none;
+}
+
+table.dataTable thead {
+  .sorting_asc:before, .sorting_desc:before, .sorting_asc_disabled:before, .sorting_desc_disabled:before {
+    display: none;
+  }
+}
+
+.dataTables_paginate {
+  .pagination .page-link {
+    padding: 0.5rem 0.75rem;
+    background-color: $gray-100;
+    border: 1px solid #cdd7ef
+  }
+
+  .page-item.active .page-link {
+    background-color: $primary;
+  }
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  .paginate_button.focus {
+    background: $primary;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: #e8ecf5;
+    width: 80px;
+    color: #b1c1d6;
+  }
+}
+ .page-item.next a{
+     width: 64px;
+ }
+table.dataTable tfoot {
+  th, td {
+    padding: 10px 18px 6px 18px;
+    border-top: 1px solid $gray-200;
+  }
+}
+.table-responsive.hoverable-table{
+	position: relative;
+}
+.hoverable-table .btn-primary{
+	position: absolute;
+    margin-left: 98px;
+    top: 0px;
+    padding: 7px 16px;
+	z-index:99;
+}

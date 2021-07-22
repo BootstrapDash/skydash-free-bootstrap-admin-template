@@ -1,0 +1,72 @@
+@media (min-width: 1025px){
+	.page{
+	  width: 1170px;
+	  margin: 0 auto;
+	  background: #ecf0fa;
+	  position: relative;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
+	  -ms-flex-pack: center;
+	  justify-content: center;
+	  min-height: 100vh;
+	  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 0px 0px, rgba(0, 0, 0, 0.3) 0px 5px 25px 0px;
+	}
+	body{
+		background:#ced3e0 !important;
+	}
+	.sticky-pin .horizontal-main {
+		max-width: 1170px;
+		margin: 0;
+	}
+	.main-header{
+		max-width:1170px;
+		margin:0 auto;
+		left:0;
+		right:0;
+		top: 0;
+	}
+	.main-content .container, .main-header > .container, .horizontal-mainwrapper.container{
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+	}
+	.horizontalMenu > .horizontalMenu-list > li > a{
+		padding:15px 11px 15px 11px;
+	}
+	.page.bg-primary-transparent, .main-error-wrapper.page {
+		background: #d9e8fc  !important;
+	}
+	.app-sidebar {
+	  left: auto !important;
+	}
+	.main-body.bg-primary-transparent, .main-body.bg-light{
+		background: #ced3e0 !important;
+	}
+	.second-sidemenu{
+		left:auto !important;
+		margin-left:70px;
+	}
+	.app.sidebar-mini.sidenav-toggled4 .first-sidemenu{
+		left: auto !important;
+	}
+	.card--calendar .ui-datepicker .ui-datepicker-calendar td a {
+		width:28px ;
+	}
+	.icons-list-item { 
+		margin-bottom:2px;
+	}
+	.main-contact-star {
+		font-size: 14px;
+	}
+	.main-content-left-chat .main-nav-line-chat .nav-link + .nav-link {
+		margin-left: 0;
+	}
+	.main-nav-line-chat {
+		padding: 0 17px;
+	}
+	.app-sidebar .main-sidebar-header{
+		left:auto;
+		right:auto;
+	}
+}

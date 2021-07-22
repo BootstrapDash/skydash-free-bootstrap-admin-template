@@ -1,0 +1,361 @@
+/* ###### 6.5 Iconbar  ###### */
+
+@media (max-width: 991.98px) {
+  .main-iconbar-show {
+    .main-iconbar {
+      display: flex;
+    }
+
+    .main-iconbar-aside {
+      display: block;
+    }
+  }
+}
+
+.main-iconbar {
+  width: 64px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: $white;
+  z-index: 500;
+
+  .nav {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0;
+    color: $default-color;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 28px;
+
+      &.typcn {
+        line-height: 1;
+
+        &::before {
+          width: auto;
+        }
+      }
+
+      &.typcn-device-laptop, &.typcn-th-large-outline {
+        font-size: 25px;
+      }
+
+      &.fa-desktop {
+        font-size: 23px;
+      }
+    }
+
+    &:hover, &:focus {
+      color: $gray-700;
+    }
+
+    &.active {
+      color: $primary;
+    }
+
+    + .nav-link {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main-iconbar {
+    display: flex;
+  }
+}
+
+.main-iconbar-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  line-height: .9;
+  color: $gray-900;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 20px;
+    height: 3px;
+    width: 24px;
+    background-color: $primary;
+    border-radius: 2px;
+  }
+
+  &:hover, &:focus {
+    color: $gray-900;
+  }
+}
+
+.main-iconbar-bottom {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-iconbar-help {
+  line-height: 0;
+  font-size: 22px;
+  color: $gray-600;
+  margin-bottom: 20px;
+
+  &:hover, &:focus {
+    color: $gray-900;
+  }
+}
+
+.main-iconbar-aside {
+  width: 230px;
+  height: 100%;
+  background-color: $white;
+  border-right: 1px solid$gray-400;
+  position: fixed;
+  top: 0;
+  left: 64px;
+  overflow-y: auto;
+  z-index: 600;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .main-iconbar-aside {
+    border-right: 0;
+    z-index: 500;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-iconbar-aside.show {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-iconbar-aside.show + .main-content {
+    margin-left: 294px;
+  }
+}
+
+.main-iconbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 0;
+
+  .main-logo {
+    line-height: 1;
+  }
+}
+
+.main-iconbar-toggle-menu {
+  display: block;
+  position: relative;
+  line-height: 0;
+  color: $gray-900;
+  font-size: 28px;
+  opacity: .5;
+
+  &:hover, &:focus {
+    opacity: 1;
+    color: $gray-900;
+  }
+
+  i:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-iconbar-toggle-menu {
+    font-size: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: -1px;
+      border-left: 2px solid $gray-900;
+    }
+
+    i {
+      &:first-child {
+        display: block;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-iconbar-body {
+  padding: 20px;
+  padding-left: 0;
+  height: calc(100vh - 68px);
+
+  .nav {
+    flex-direction: column;
+    border-left: 2px solid $gray-200;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  .nav-item {
+    position: relative;
+    display: block;
+
+    + .nav-item {
+      margin-top: -1px;
+      border-top: 1px dotted $gray-300;
+    }
+
+    &.active .nav-link {
+      color: $primary;
+
+      i {
+        color: $primary;
+      }
+    }
+
+    &.show .nav-sub {
+      display: block;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    color: $default-color;
+    font-size: 13px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 38px;
+
+    i {
+      color: $gray-500;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 0;
+      margin-right: 10px;
+
+      &.typcn {
+        line-height: .9;
+
+        &::before {
+          width: auto;
+        }
+      }
+    }
+
+    &:hover, &:focus, &:hover i, &:focus i {
+      color: $primary;
+    }
+
+    &.with-sub {
+      justify-content: space-between;
+
+      &::after {
+        content: '\f3d0';
+        font-family: 'Ionicons';
+        font-size: 11px;
+        font-weight: 400;
+        display: inline-block;
+        position: relative;
+        margin-left: auto;
+        color: $gray-500;
+      }
+    }
+  }
+
+  .nav-sub {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px dotted $gray-300;
+    display: none;
+
+    .nav-sub-item {
+      position: relative;
+      display: block;
+      margin-left: 15px;
+
+      + .nav-sub-item {
+        border-top: 1px dotted $gray-300;
+      }
+
+      &.active > .nav-sub-link {
+        color: $primary;
+      }
+    }
+
+    .nav-sub-link {
+      display: flex;
+      align-items: center;
+      height: 36px;
+      color: $default-color;
+
+      &:hover, &:focus {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main-iconbar-body .nav-link.with-sub::after {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+}
+
+.main-iconbar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $gray-900;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.main-iconbar-text {
+  display: block;
+  font-size: 12px;
+  color: $gray-600;
+  margin-bottom: 12px;
+}
+
+.main-iconbar-pane {
+  margin-bottom: 20px;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}

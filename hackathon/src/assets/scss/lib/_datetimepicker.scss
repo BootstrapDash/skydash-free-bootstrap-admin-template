@@ -1,0 +1,298 @@
+/* ###### 4.12 Datetimepicker ###### */
+
+/* Amaze UI Datetimepicker */
+
+.datetimepicker {
+  box-shadow: none;
+  border-radius: 0;
+  border-width: 1px;
+  border-color: $gray-300;
+  min-width: 270px;
+  padding: 0 10px 10px;
+
+  &::before {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+
+    th {
+      &.prev, &.next, &.switch {
+        background-color: $white;
+        color: $default-color;
+      }
+
+      &.prev, &.next {
+        position: relative;
+      }
+
+      &.prev span, &.next span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.prev span::before, &.next span::before {
+        font-family: 'Ionicons';
+        position: absolute;
+        top: 50%;
+        font-size: 16px;
+        color: $gray-900;
+        line-height: 0;
+      }
+
+      &.prev {
+        &:hover, &:focus {
+          background-color: $white;
+        }
+      }
+
+      &.next {
+        &:hover, &:focus {
+          background-color: $white;
+        }
+      }
+
+      &.prev {
+        &:hover span::before, &:focus span::before {
+          color: $primary;
+        }
+      }
+
+      &.next {
+        &:hover span::before, &:focus span::before {
+          color: $primary;
+        }
+      }
+
+      &.prev span::before {
+        content: '\f3cf';
+        left: 0;
+      }
+
+      &.next span::before {
+        content: '\f3d1';
+        right: 0;
+      }
+
+      &.switch {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: $gray-900;
+
+        &:hover, &:focus {
+          background-color: $white;
+          color: $primary;
+        }
+      }
+    }
+
+    td {
+      font-size: 0.875rem;
+      text-align: center;
+
+      &.old, &.new {
+        color: $gray-500;
+      }
+
+      &.active {
+        background-color: $primary;
+        color: $white;
+
+        &:hover, &:focus {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+
+    span.active {
+      background-color: $primary;
+      color: $white;
+
+      &:hover, &:focus {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .datetimepicker-days table thead tr {
+    &:first-child th {
+      height: 38px;
+    }
+
+    &:last-child th {
+      height: 25px;
+      text-transform: uppercase;
+      color: $gray-700;
+      font-weight: 700;
+      font-size: 11px;
+    }
+  }
+}
+
+/* jQuery Simple Datetimepicker */
+
+.main-datetimepicker {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: $gray-300;
+  margin-top: 2px;
+
+  > {
+    .datepicker_header {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > .icon-home {
+        display: none;
+      }
+
+      a {
+        &:nth-child(2), &:last-child {
+          display: block;
+          position: relative;
+          text-indent: -999999px;
+        }
+
+        &:nth-child(2)::before, &:last-child::before {
+          font-family: 'Ionicons';
+          position: absolute;
+          top: 50%;
+          line-height: 0;
+          text-indent: 0;
+          font-size: 13px;
+        }
+
+        &:nth-child(2)::before {
+          content: '\f3cf';
+          left: 0;
+        }
+
+        &:last-child::before {
+          content: '\f3d1';
+          right: 0;
+        }
+      }
+
+      span {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        text-transform: uppercase;
+      }
+    }
+
+    .datepicker_inner_container {
+      border-radius: 0;
+      box-shadow: none;
+      border-width: 0;
+      display: flex;
+      height: 225px;
+      margin: 0;
+      background-color: $white;
+
+      &::after {
+        display: none;
+      }
+
+      > {
+        .datepicker_calendar {
+          width: 230px;
+          border-width: 0;
+          border-radius: 0;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          padding: 5px;
+          float: none;
+          margin: 0;
+
+          > table {
+            width: 100%;
+            height: 100%;
+          }
+
+          th {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: $gray-900;
+            font-weight: 700;
+            text-align: center;
+            padding: 8px 5px;
+          }
+
+          td {
+            font-size: 0.875rem;
+            font-weight: 400;
+            text-align: center;
+            padding: 5px;
+
+            &.day_another_month {
+              color: $gray-500;
+            }
+
+            &.hover {
+              background-color: $gray-200;
+              cursor: pointer;
+            }
+
+            &.active {
+              background-color: $primary;
+              color: $white;
+			  border-radius: 2px;
+            }
+          }
+        }
+
+        .datepicker_timelist {
+          float: none;
+          width: 70px;
+          height: 100% !important;
+          border-left: 1px solid$gray-400;
+
+          > div.timelist_item {
+            padding: 5px 8px;
+            margin: 0 0 0 1px;
+
+            &:hover, &:focus {
+              background-color: $gray-200;
+            }
+
+            &.active {
+              background-color: $primary;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Picker JS */
+
+.picker-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.picker-cell__header {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.picker-item {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.picker-picked {
+  font-weight: 500;
+  color: $primary;
+}

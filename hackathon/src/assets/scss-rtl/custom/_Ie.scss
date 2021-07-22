@@ -1,0 +1,417 @@
+/*-----IE issues-----*/
+
+*::-ms-backdrop,
+.main-header-center {
+	display: inline-table !important;
+	width: 350px;
+}
+
+*::-ms-backdrop,
+.main-header-center .form-control {
+	padding: 0.5rem 1.5rem;
+}
+
+@media (min-width: 992px) {
+	*::-ms-backdrop,
+	.sidebar-mini .main-header-left {
+		margin-right: 80px;
+	}
+	*::-ms-backdrop,
+	.sidebar-mini .main-header .main-header-left .header-brand {
+		margin-left: 80px;
+		width: auto;
+	}
+	*::-ms-backdrop,
+	.card-img-top {
+		height: 250px;
+	}
+}
+
+*::-ms-backdrop,
+.main-content-body.main-content-body-mail,
+*::-ms-backdrop,
+.main-content-body.main-content-body-chat {
+	flex: inherit;
+}
+
+*::-ms-backdrop,
+.side-badge {
+	top: 14px;
+}
+
+*::-ms-backdrop,
+.breadcrumb-3 li,
+*::-ms-backdrop,
+.breadcrumb-4 li {
+	display: inline-block;
+}
+
+*::-ms-backdrop,
+.page-h {
+	height: 100%;
+}
+
+*::-ms-backdrop,
+p {
+	font-size: 13px;
+}
+
+*::-ms-backdrop,
+.breadcrumb-right .btn {
+	padding: 0.4rem 1rem;
+}
+
+*::-ms-backdrop,
+.main-content {
+	height: 100%;
+}
+
+*::-ms-backdrop,
+.horizontalMenucontainer .main-footer- {
+	padding-bottom: 10px;
+}
+
+*::-ms-backdrop,
+.media-list.media.d-sm-flex {
+	display: initial;
+}
+
+*::-ms-backdrop,
+.chat .action-header {
+	padding: 10px 13px 1px 17px;
+}
+
+*::-ms-backdrop,
+.sidebar-mini .main-header-left .btn {
+	margin-right: 60px;
+	right: 250px;
+}
+
+*::-ms-backdrop,
+.sidebar-mini .main-content.app-content .main-header-left {
+	margin-right: 0;
+}
+
+*::-ms-backdrop,
+.sidebar.sidebar-open {
+	z-index: 9999 !important;
+}
+
+*::-ms-backdrop,
+.p-4.border-bottom {
+	height: 100%;
+}
+
+*::-ms-backdrop,
+.img-fluid,
+*::-ms-backdrop,
+.table,
+*::-ms-backdrop,
+.text-wrap table {
+	max-width: 100%;
+}
+
+*::-ms-backdrop,
+.sidebar {
+	z-index: 0 !important;
+}
+
+*::-ms-backdrop,
+.d-block.media.media-list {
+	display: inline !important;
+}
+
+*::-ms-backdrop,
+.main-header-message>a,
+*::-ms-backdrop,
+.main-header-notification>a,
+*::-ms-backdrop,
+.full-screen.nav-item>a,
+*::-ms-backdrop,
+.fullscreen-button .full-screen-link {
+	line-height: 49px !important;
+}
+
+*::-ms-backdrop,
+.datetimepicker table th.prev span,
+*::-ms-backdrop,
+.datetimepicker table th.next span {
+	top: 20px !important;
+}
+
+*::-ms-backdrop,
+.datetimepicker table th.next {
+	border-top-right-radius: 0;
+}
+
+*::-ms-backdrop,
+.datetimepicker table th.prev {
+	border-top-left-radius: 0;
+}
+
+*::-ms-backdrop,
+.main-header-center .btn,
+*::-ms-backdrop,
+.main-header-center .sp-container button,
+*::-ms-backdrop,
+.sp-container .main-header-center button {
+	top: 0;
+}
+
+@media (min-width: 991px) {
+	*::-ms-backdrop,
+	.main-header-right .nav-link.btn-default.btn {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 991px) {
+	*::-ms-backdrop,
+	.card-img-top {
+		height: 300px;
+	}
+	*::-ms-backdrop,
+	.main-header-right .nav-link.btn-default.btn {
+		margin-top: 3px;
+	}
+}
+
+*::-ms-backdrop,
+.btn-icon-list .btn {
+	display: table;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 10px;
+}
+
+*::-ms-backdrop,
+.pricing .list-unstyled li {
+	dispLay: block;
+}
+
+*::-ms-backdrop,
+.main-footer {
+	width: 100%;
+	position: relative;
+	bottom: -5px;
+	margin-top: 1.5rem;
+	margin-bottom: -10px;
+	height: inherit !important;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+}
+
+*::-ms-backdrop,
+.media.d-sm-flex {
+	display: initial;
+}
+
+*::-ms-backdrop,
+.btn,
+.sp-container button {
+	padding: 8.5px;
+}
+
+*::-ms-backdrop,
+.horizontalMenucontainer .main-header-left {
+	margin-left: 0;
+}
+
+*::-ms-backdrop,
+.media-list.media.d-block {
+	display: inline !important;
+}
+
+*::-ms-backdrop,
+.main-msg-wrapper {
+	display: inline-table;
+}
+
+*::-ms-backdrop,
+.p-text .p-name {
+	display: block;
+}
+
+*::-ms-backdrop,
+.sidebar .tab-menu-heading {
+	position: absolute !important;
+}
+
+*::-ms-backdrop,
+.card--calendar .ui-datepicker-inline {
+	border-width: 1px !important;
+}
+
+*::-ms-backdrop,
+.fc-datepicker.main-datepicker.hasDatepicker {
+	border-right: 0 !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+}
+
+*::-ms-backdrop,
+.second-sidemenu .resp-tabs-container .slide-menu.submenu-list li {
+	display: flex;
+}
+
+@media (min-width: 992px) {
+	*::-ms-backdrop,
+	.pulse-danger,
+	*::-ms-backdrop,
+	.pulse {
+		top: 13px;
+	}
+	*::-ms-backdrop,
+	.card.custom-card .box {
+		position: static;
+	}
+	*::-ms-backdrop,
+	.thumb .thumb-img {
+		height: 139px;
+	}
+	*::-ms-backdrop,
+	.main-chat-body .media-body .main-msg-wrapper.right,
+	*::-ms-backdrop,
+	.main-chat-body .media-body .main-msg-wrapper.left {
+		display: inline-table;
+	}
+	*::-ms-backdrop,
+	.main-dashboard-header-right>div:first-child {
+		flex-basis: 150px;
+	}
+	*::-ms-backdrop,
+	.tasks .ckbox {
+		margin-left: 10px;
+	}
+	*::-ms-backdrop,
+	.app-sidebar__toggle {
+		margin-left: 30px !important;
+	}
+	*::-ms-backdrop,
+	.product-details.table-responsive.text-nowrap .media-body {
+		flex: none;
+	}
+	*::-ms-backdrop,
+	.main-star span {
+		margin-right: 0;
+	}
+	*::-ms-backdrop,
+	.ml-3.tx-16.my-auto {
+		margin-right: 1rem !important;
+	}
+}
+
+@media (min-width: 767px) {
+	*::-ms-backdrop,
+	.bg-primary-transparent .row.wd-100p.mx-auto.text-center {
+		margin-top: 4rem;
+	}
+	*::-ms-backdrop,
+	.login.d-flex.align-items-center.py-2 {
+		margin-top: 7rem;
+	}
+}
+
+@media (max-width: 767px) {
+	*::-ms-backdrop,
+	.dropdown.nav-item.main-header-message,
+	*::-ms-backdrop,
+	.dropdown.nav-item.main-header-notification,
+	*::-ms-backdrop,
+	.dropdown.main-header-message.right-toggle {
+		margin-top: 7px !important;
+	}
+	*::-ms-backdrop,
+	.main-header-left .responsive-logo {
+		margin-right: 40px !important;
+	}
+}
+
+*::-ms-backdrop,
+.main-body {
+	-ms-overflow-x: hidden;
+}
+
+*::-ms-backdrop,
+.error-page1 {
+	-ms-overflow-y: hidden;
+}
+
+*::-ms-backdrop,
+.datetimepicker table th.next span::before,
+*::-ms-backdrop,
+.datetimepicker table th.prev span::before {
+	top: 20px !important;
+}
+
+*::-ms-backdrop,
+.main-header-right .nav .dropdown.nav-itemd-none .dropdown-menu img {
+	width: 100%;
+}
+
+*::-ms-backdrop,
+.br-theme-bars-pill .br-widget a:last-child {
+	border-top-left-radius: 999px;
+	border-bottom-left-radius: 999px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+*::-ms-backdrop,
+.br-theme-bars-pill .br-widget a:first-child {
+	border-top-right-radius: 999px;
+	border-bottom-right-radius: 999px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+*::-ms-backdrop,
+#list1 .avatar-md {
+	width: inherit !important;
+}
+
+*::-ms-backdrop,
+#list3 .ml-4 {
+	margin-left: 0 !important;
+}
+
+*::-ms-backdrop,
+html.fullscreen-button {
+	width: 100%;
+}
+
+*::-ms-backdrop,
+html.fullscreen-button .horizontal-content,
+*::-ms-backdrop,
+html.fullscreen-button .app-content {
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 100vh;
+	direction: rtl;
+}
+
+*::-ms-backdrop,
+.app-sidebar .slide .side-menu__item.active::before {
+	top: 0;
+}
+
+*::-ms-backdrop,
+.tab-content.border-bottom.p-4 {
+	height: inherit !important;
+}
+
+@media (min-width: 1025px) {
+	*::-ms-backdrop,
+	.btn,
+	.sp-container button {
+		padding: 12px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	*::-ms-backdrop,
+	.app-sidebar__toggle {
+		margin-left: 2rem !important;
+	}
+}

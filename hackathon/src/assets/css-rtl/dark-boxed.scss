@@ -1,0 +1,65 @@
+@media (min-width: 1025px) {
+	.dark-theme .page {
+		width: 1170px;
+		margin: 0 auto;
+		background: #141b2d;
+		position: relative;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-ms-flex-pack: center;
+		justify-content: center;
+		min-height: 100vh;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 0px 0px, rgba(0, 0, 0, 0.3) 0px 5px 25px 0px; 
+	}
+	body.dark-theme {
+		background:#212b42 !important; 
+	}
+	.dark-theme .sticky-pin .horizontal-main {
+		max-width: 1170px;
+		margin: 0; 
+		left: 0;
+		right: 0;
+	}
+	.dark-theme .main-header {
+		max-width: 1170px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: 0; 
+	}
+	.dark-theme .main-content .container, .dark-theme .main-header > .container, .dark-theme .horizontal-mainwrapper.container {
+		padding-right: 0.75rem;
+		padding-left: 0.75rem; 
+	}
+	.dark-theme .horizontalMenu > .horizontalMenu-list > li > a {
+		padding: 15px 9px 15px 9px; 
+	}
+	.dark-theme .app-sidebar {
+	  right: auto !important;
+	}
+	.dark-theme .second-sidemenu{
+		right:auto !important;
+		margin-right:70px;
+	}
+	.dark-theme.app.sidebar-mini.sidenav-toggled4 .first-sidemenu{
+		right: auto !important;
+	}
+	.dark-theme .card--calendar .ui-datepicker .ui-datepicker-calendar td a {
+		width:28px ;
+	}
+	.dark-theme .icons-list-item { 
+		margin-bottom:2px;
+	}
+	.dark-theme .main-contact-star {
+		font-size: 14px;
+	}
+	.dark-theme .main-content-left-chat .main-nav-line-chat .nav-link + .nav-link {
+		margin-left: 0;
+	}
+	.dark-theme .main-nav-line-chat {
+		padding: 0 17px;
+	}
+}
+

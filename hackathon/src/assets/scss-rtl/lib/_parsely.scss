@@ -1,0 +1,74 @@
+/* ###### 4.6 Parsley ###### */
+
+input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:focus, textarea.parsley-success:focus {
+  box-shadow: none !important;
+}
+
+.parsley-checkbox {
+  &.parsley-error {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid $danger;
+  }
+
+  &.parsley-success {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid $success;
+  }
+}
+
+.parsley-errors-list {
+  color: $danger;
+  list-style: none;
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 0;
+
+  li {
+    margin: 5px 0 0;
+  }
+}
+
+/***** CUSTOM STYLED ERROR MESSAGE *****/
+
+.parsley-style-1 {
+  .parsley-input {
+    &.parsley-error .form-control {
+      background-color: #fef9f9;
+      border-color: $danger;
+      border-bottom-width: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.parsley-success .form-control {
+      border-color: $success;
+    }
+  }
+
+  .parsley-checkbox.parsley-error {
+    border: 1px solid $danger;
+    background-color: #fef9f9;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  .parsley-select.parsley-error .select2-container--default .select2-selection--single {
+    background-color: #fef9f9;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .parsley-errors-list.filled {
+    background-color: $danger;
+    color: $white;
+    padding: 7px 10px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+}

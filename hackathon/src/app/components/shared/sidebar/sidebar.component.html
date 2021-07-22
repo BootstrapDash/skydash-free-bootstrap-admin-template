@@ -1,0 +1,74 @@
+<!-- main-sidebar -->
+<div
+  class="app-sidebar__overlay z0"
+  data-toggle="sidebar"
+  (click)="overlayClicked()"
+></div>
+<aside class="app-sidebar sidebar-scroll" id="app_sidebar">
+  <div class="main-sidebar-header active">
+    <a
+      class="desktop-logo logo-light active"
+      routerLink="/dashboard"
+    >
+      <img
+        src="https://ewns.in/assets/img/ewns-logo3.png"
+        class="main-logo"
+        alt="logo"
+      />
+    </a>
+  </div>
+  <div class="main-sidemenu">
+    <div class="app-sidebar__user clearfix">
+      <div class="dropdown user-pro-body">
+        <div class="">
+
+          <img 
+            alt="user-img"
+            class="avatar avatar-xl brround"
+            style="object-fit: contain !important;" src="https://ewnsassets.s3.ap-south-1.amazonaws.com/cms/assets/img/faces/6.jpg"
+          />
+
+         
+          <span class="avatar-status profile-status bg-green"></span>
+        </div>
+        <div class="user-info">
+          <h4 class="font-weight-semibold mt-3 mb-0">
+            Test Name
+          </h4>
+          <span class="mb-0 text-muted" 
+            >Premium User</span
+          >
+        </div>
+      </div>
+    </div>
+    <ul class="side-menu">
+      <li class="slide">
+        <a class="side-menu__item" routerLink="/dashboard"
+          ><i class="fas fa-home fa-lg"></i
+          ><span class="side-menu__label">&nbsp;&nbsp;&nbsp; Dashboard</span></a
+        >
+      </li>
+
+      <li *ngFor="let item of sideNav" class="slide" [id]="item.name">
+        <div style="color: #ee3a42;"
+          class="side-menu__item"
+          data-toggle="slide"
+          (click)="expand(item.name)"
+        >
+          <i [class]="item.fontcls"></i>
+          <span class="side-menu__label"
+            >&nbsp;&nbsp;&nbsp; {{ item.name }}</span
+          ><i class="angle fe fe-chevron-down"></i>
+        </div>
+        <ul class="slide-menu">
+          <li *ngFor="let child of item.childs">
+            <div class="slide-item" (click)="orNavItemClick(child.routerlink)">
+              {{ child.name }}
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>
+<!-- main-sidebar -->

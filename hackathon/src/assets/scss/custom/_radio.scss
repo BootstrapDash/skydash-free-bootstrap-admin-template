@@ -1,0 +1,90 @@
+/* Radio Box */
+
+.rdiobox {
+  font-weight: normal;
+  position: relative;
+  display: block;
+  line-height: 18px;
+
+  span {
+    padding-left: 13px;
+
+    &:before, &:after {
+      line-height: 18px;
+      position: absolute;
+    }
+
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border: 1px solid $gray-500;
+      border-radius: 50px;
+      top: 2px;
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background-color: $white;
+      border-radius: 50px;
+      top: 7px;
+      left: 5px;
+      display: none;
+    }
+
+    &:empty {
+      padding-left: 0;
+      width: 16px;
+      display: block;
+    }
+  }
+
+  input[type='radio'] {
+    opacity: 0;
+    margin: 0;
+
+    &:checked + span {
+      &:before {
+        border-color: transparent;
+        background-color: $primary;
+      }
+
+      &:after {
+        display: block;
+      }
+    }
+
+    &[disabled] + span {
+      opacity: .75;
+
+      &:before, &:after {
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.rdiobox-inline {
+  display: inline-block;
+}
+
+.form-group-rdiobox {
+  display: flex;
+  align-items: center;
+
+  .rdiobox {
+    margin-bottom: 0;
+
+    + .rdiobox {
+      margin-left: 30px;
+    }
+
+    span {
+      padding-left: 0;
+    }
+  }
+}

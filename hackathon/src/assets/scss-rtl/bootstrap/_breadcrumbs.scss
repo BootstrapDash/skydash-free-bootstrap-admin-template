@@ -1,0 +1,226 @@
+.breadcrumb-header {
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+
+  .breadcrumb {
+    background: transparent !important;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+}
+
+.breadcrumb-3 {
+  ol {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    display: contents;
+    text-align: center;
+  }
+}
+
+.breadcrumb-4 {
+  ol {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  li {
+    display: contents;
+    text-align: right;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+
+@media (max-width: 633px) {
+  .breadcrumb-header {
+    display: block;
+  }
+}
+
+@media (max-width: 380px) {
+  .breadcrumb-right .btn-outline-primary {
+    display: none;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: $gray-200;
+  border-radius: 3px;
+}
+
+.breadcrumb-item {
+  + .breadcrumb-item {
+    padding-right: 0.5rem;
+
+    &::before {
+      display: inline-block;
+      padding-left: 0.5rem;
+      color: $gray-600;
+      content: "/";
+    }
+
+    &:hover::before {
+      text-decoration: underline;
+      text-decoration: none;
+    }
+  }
+
+  &.active {
+    color: $gray-600;
+  }
+}
+
+.breadcrumb {
+  background-color: $gray-100;
+}
+
+.breadcrumb-style1, .breadcrumb-style2, .breadcrumb-style3 {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+.breadcrumb-style1 .breadcrumb-item, .breadcrumb-style2 .breadcrumb-item, .breadcrumb-style3 .breadcrumb-item {
+  font-size: 11px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.breadcrumb-style1 .breadcrumb-item a, .breadcrumb-style2 .breadcrumb-item a, .breadcrumb-style3 .breadcrumb-item a {
+  color: $gray-900;
+}
+
+.breadcrumb-style1 .breadcrumb-item a {
+  &:hover, &:focus {
+    color: $primary;
+  }
+}
+
+.breadcrumb-style2 .breadcrumb-item a {
+  &:hover, &:focus {
+    color: $primary;
+  }
+}
+
+.breadcrumb-style3 .breadcrumb-item a {
+  &:hover, &:focus {
+    color: $primary;
+  }
+}
+
+.breadcrumb-style1 .breadcrumb-item.active, .breadcrumb-style2 .breadcrumb-item.active, .breadcrumb-style3 .breadcrumb-item.active {
+  color: $primary;
+}
+
+.breadcrumb-style1 .breadcrumb-item + .breadcrumb-item::before, .breadcrumb-style2 .breadcrumb-item + .breadcrumb-item::before, .breadcrumb-style3 .breadcrumb-item + .breadcrumb-item::before {
+  color: $gray-500;
+}
+
+.breadcrumb-style2 .breadcrumb-item + .breadcrumb-item::before, .breadcrumb-style3 .breadcrumb-item + .breadcrumb-item::before {
+  width: 16px;
+  text-align: center;
+  font-family: 'Ionicons';
+}
+
+.breadcrumb-style2 .breadcrumb-item + .breadcrumb-item::before {
+  content: '\f3cf';
+}
+
+.breadcrumb-style3 .breadcrumb-item + .breadcrumb-item::before {
+  content: '\f287';
+}
+
+.main-content-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $gray-500;
+  margin-bottom: 10px;
+
+  span {
+    position: relative;
+
+    + span::before {
+      content: '\f3d1';
+      font-family: 'Ionicons';
+      font-size: 12px;
+      font-weight: 300;
+      display: inline;
+      margin: 0 5px;
+      color:$gray-400;
+      line-height: 0;
+      position: relative;
+      top: 1px;
+    }
+
+    &:last-child {
+      color: $gray-700;
+    }
+  }
+}
+
+.main-breadcrumbs {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 0;
+
+  .breadcrumb-item {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 700;
+
+    a {
+      color: $default-color;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $gray-500;
+      }
+    }
+
+    &.active {
+      color: $primary;
+    }
+
+    + .breadcrumb-item {
+      padding-left: 8px;
+
+      &::before {
+        color: $gray-500;
+        padding-right: 8px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-breadcrumbs .breadcrumb-item a {
+    transition: none;
+  }
+}

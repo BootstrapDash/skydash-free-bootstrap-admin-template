@@ -1,0 +1,102 @@
+/* ###### 6.2 Footer  ###### */
+
+.main-footer {
+  background-color: $white;
+  border-top: 1px solid $border;
+  margin-top: auto;
+}
+
+@media (min-width: 992px) {
+  .main-footer {
+    display: block;
+  }
+
+  .sticky-pin {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+}
+
+.side-header {
+  position: sticky;
+  width: 100%;
+  z-index: 10 !important;
+  border-bottom:1px solid #e7ebf5;
+}
+
+.main-footer {
+  .container {
+    font-size: 12px;
+    padding: 38px 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    color: $gray-600;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    line-height: 3.7;
+  }
+
+  .container-fluid {
+    font-size: 12px;
+    padding: 38px 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    color: $gray-600;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    line-height: 3.7;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-footer .container {
+    padding: 10px 0 0;
+  }
+}
+
+.main-footer-app {
+  .container, .container-fluid {
+    border-top-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-footer .container-fluid {
+    font-size: 11px;
+  }
+}
+
+.main-footer-demo {
+  background-color: #0c025b;
+  color: $white-4;
+  height: 60px;
+
+  .container {
+    border-top-width: 0;
+  }
+
+  a {
+    color: $white-5;
+
+    &:hover, &:focus {
+      color: $white;
+    }
+  }
+}

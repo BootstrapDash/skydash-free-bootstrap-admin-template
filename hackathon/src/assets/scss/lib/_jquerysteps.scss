@@ -1,0 +1,553 @@
+/* ###### 4.3 jQuery Steps ###### */
+
+/***** DEFAULT STYLE WIZARD *****/
+
+.wizard {
+  border: 1px solid $gray-200;
+  background-color: $white;
+
+  > {
+    .steps {
+      padding: 20px;
+
+      > ul {
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+
+        li {
+          float: none;
+          display: block;
+          width: auto;
+
+          .current-info {
+            display: none;
+          }
+
+          .title {
+            margin-left: 5px;
+            white-space: nowrap;
+            transition: all 0.2s ease-in-out;
+          }
+
+          + li {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      a {
+        color: $gray-900;
+        font-weight: 500;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover, &:active {
+          color: $gray-900;
+          font-weight: 500;
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .number, &:hover .number, &:active .number {
+          flex-shrink: 0;
+          font-weight: 700;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          color: $white;
+          display: block;
+          text-align: center;
+          line-height: 2;
+          width: 30px;
+          height: 30px;
+          background-color:$gray-400;
+          border-radius: 100%;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      .disabled {
+        display: none;
+
+        a {
+          color: $gray-500;
+
+          &:hover, &:active {
+            color: $gray-500;
+          }
+        }
+      }
+
+      .current a {
+        color: $primary;
+
+        &:hover, &:active {
+          color: $primary;
+        }
+
+        .title, &:hover .title, &:active .title {
+          display: inline-block;
+        }
+
+        .number, &:hover .number, &:active .number {
+          background-color: $primary;
+        }
+      }
+
+      .done a {
+        color: $teal;
+
+        &:hover, &:active {
+          color: $teal;
+        }
+
+        .title, &:hover .title, &:active .title {
+          display: none;
+        }
+
+        .number, &:hover .number, &:active .number {
+          background-color: $teal;
+        }
+      }
+    }
+
+    .content {
+      border-top: 1px solid $gray-200;
+      border-bottom: 1px solid $gray-200;
+      min-height: 150px;
+      padding: 20px;
+
+      > {
+        .title {
+          font-size: 18px;
+          color: $gray-900;
+          font-weight: 700;
+          margin-bottom: 5px;
+          display: none;
+
+          &.current {
+            display: block;
+          }
+        }
+
+        .body {
+          float: none;
+          position: static;
+          width: auto;
+          height: auto;
+
+          input.parsley-error {
+            border-color: $danger;
+
+            + ul {
+              list-style: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    .actions {
+      padding: 20px;
+
+      > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        > li:last-child a {
+          background-color: $teal;
+        }
+      }
+
+      a {
+        display: block;
+        background-color: $primary;
+        padding: 9px 25px;
+        line-height: 1.573;
+        color: $white;
+		border-radius: 3px;
+
+        &:hover, &:active {
+          display: block;
+          background-color: $primary;
+          padding: 9px 25px;
+          line-height: 1.573;
+          color: $white;
+        }
+      }
+
+      .disabled a {
+        background-color: $gray-500;
+		border-radius: 3px;
+
+        &:hover, &:active {
+          background-color: $gray-500;
+        }
+      }
+    }
+  }
+
+  &.vertical > {
+    .steps {
+      padding: 20px;
+
+      ul li {
+        + li {
+          margin-left: 10px;
+        }
+
+        .title {
+          display: none;
+        }
+      }
+
+      .current a .title {
+        display: inline-block;
+      }
+    }
+
+    .content {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .actions {
+      padding: 20px;
+
+      ul {
+        float: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard > .steps {
+    padding: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard > .steps {
+    padding: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wizard > .steps > ul li .title {
+    transition: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard > .steps > ul li .title {
+    display: none;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard > .steps > ul li .title {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard > .steps > ul li + li {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard > .steps > ul li + li {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wizard > .steps a {
+    justify-content: flex-start;
+
+    &:hover, &:active {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wizard > .steps a {
+    .number, &:hover .number, &:active .number {
+      transition: none;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard > .steps a {
+    .number, &:hover .number, &:active .number {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 2.1;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard > .steps .disabled {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard > .steps .done a {
+    .title, &:hover .title, &:active .title {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard > .content {
+    padding: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard > .content {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard > .actions {
+    padding: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard > .actions {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .steps {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard.vertical > .steps {
+    width: 15%;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .steps {
+    padding: 25px;
+    width: 30%;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .steps ul {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .steps ul li + li {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard.vertical > .steps ul li + li {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .steps ul li .title {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .steps a {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .steps .current a .title {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .steps .current a .title {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .content {
+    border-top-width: 0;
+    border-bottom-width: 0;
+    width: 80%;
+    float: right;
+    border-left: 1px solid $border;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard.vertical > .content {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .content {
+    width: 70%;
+    padding: 25px;
+  }
+}
+
+@media (min-width: 576px) {
+  .wizard.vertical > .actions {
+    width: 80%;
+    float: right;
+    border-left: 1px solid $border;
+  }
+}
+
+@media (min-width: 768px) {
+  .wizard.vertical > .actions {
+    width: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  .wizard.vertical > .actions {
+    width: 70%;
+    padding: 25px;
+  }
+}
+
+/****** EQUAL COLUMN WIDTH STEP INDICATOR *****/
+
+.step-equal-width > .steps > ul {
+  display: flex;
+
+  > li {
+    flex: 1;
+    width: auto;
+    float: none;
+    flex: 1;
+    width: auto;
+    float: none;
+  }
+
+  display: flex;
+}
+
+/****** EQUAL COLUMN WIDTH STEP INDICATOR *****/
+
+/***** CUSTOM STYLES *****/
+
+.wizard-style-1 > .steps > ul {
+  a {
+    padding: 0;
+    height: 50px;
+
+    &:hover, &:active {
+      padding: 0;
+      height: 50px;
+    }
+
+    .number, &:hover .number, &:active .number {
+      width: 50px;
+      height: 100%;
+      border: 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: $gray-600;
+      background-color: $gray-300;
+      border-radius: 0;
+    }
+
+    .title, &:hover .title, &:active .title {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  .current a {
+    .number, &:hover .number, &:active .number {
+      background-color: #452efa;
+      color: $white;
+    }
+  }
+
+  .done a {
+    .number, &:hover .number, &:active .number {
+      background-color: #643ab0;
+      color: $white;
+    }
+  }
+}
+
+.wizard-style-2 > .steps > ul {
+  a {
+    padding: 0;
+    height: 50px;
+    border-radius: 50px;
+
+    &:hover, &:active {
+      padding: 0;
+      height: 50px;
+      border-radius: 50px;
+    }
+
+    .number, &:hover .number, &:active .number {
+      width: 50px;
+      height: 100%;
+      border: 2px solid $gray-200;
+      font-size: 18px;
+      font-weight: bold;
+      color: $gray-600;
+      background-color: $white;
+    }
+
+    .title, &:hover .title, &:active .title {
+      margin-right: 20px;
+    }
+  }
+
+  .current a {
+    .number, &:hover .number, &:active .number {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+
+  .done a {
+    .number, &:hover .number, &:active .number {
+      border-color: $purple;
+      color: $purple;
+    }
+  }
+}

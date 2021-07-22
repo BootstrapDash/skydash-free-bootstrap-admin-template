@@ -1,0 +1,12 @@
+<div class="row row-sm">
+	<div class="col-sm-7 col-md-6 col-lg-4">
+		<div class="input-group file-browser">
+			<input type="text" class="form-control border-right-0 browse-file" placeholder="choose" readonly>
+			<label class="input-group-btn">
+				<span class="btn btn-default">
+					Browse <input type="file" style="display: none;" multiple>
+				</span>
+			</label>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,195 @@
+/* ###### 3.15 Tooltip ###### */
+
+.tooltip {
+  top: 0;
+}
+
+.tooltip-inner {
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.tooltip-primary {
+  .tooltip-inner {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .arrow::before, &.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: $primary;
+  }
+
+  &.bs-tooltip-bottom .arrow::before, &.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: $primary;
+  }
+
+  &.bs-tooltip-left .arrow::before, &.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+    border-left-color: $primary;
+  }
+
+  &.bs-tooltip-right .arrow::before, &.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+    border-right-color: $primary;
+  }
+}
+
+.tooltip-secondary {
+  .tooltip-inner {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &.bs-tooltip-top .arrow::before, &.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: $primary;
+  }
+
+  &.bs-tooltip-bottom .arrow::before, &.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: $primary;
+  }
+
+  &.bs-tooltip-left .arrow::before, &.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+    border-left-color: $primary;
+  }
+
+  &.bs-tooltip-right .arrow::before, &.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+    border-right-color: $primary;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 98;
+  display: block;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.76562rem;
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.show {
+    opacity: 0.9;
+  }
+
+  .arrow {
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^="top"] .arrow {
+  bottom: 0;
+}
+
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+  top: 0;
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: $black;
+}
+
+.bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^="right"] .arrow {
+  left: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+  right: 0;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: $black;
+}
+
+.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^="bottom"] .arrow {
+  top: 0;
+}
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+  bottom: 0;
+  border-width: 0 0.4rem 0.4rem;
+  border-bottom-color: $black;
+}
+
+.bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^="left"] .arrow {
+  right: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  left: 0;
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-left-color: $black;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: $white;
+  text-align: center;
+  background-color: $black;
+  border-radius: 3px;
+}
+
+.tooltip-static-demo {
+  text-align: center;
+  background-color: $gray-200;
+  padding: 20px;
+
+  .tooltip {
+    z-index: 0;
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^="top"] .arrow, .bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^="bottom"] .arrow {
+    left: 50%;
+    margin-left: -2px;
+  }
+
+  .bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"], .bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
+    margin-top: 5px;
+  }
+
+  .bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^="left"] .arrow, .bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^="right"] .arrow {
+    top: 50%;
+    margin-top: -6px;
+  }
+}

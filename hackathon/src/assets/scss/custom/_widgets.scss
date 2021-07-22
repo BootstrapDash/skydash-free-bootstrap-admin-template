@@ -1,0 +1,69 @@
+.widget-user {
+  .widget-user-header {
+    padding: 20px;
+    height: 120px;
+  }
+
+  .widget-user-username {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 300;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    color: $white;
+  }
+
+  .widget-user-desc {
+    margin-top: 0;
+    color: $white;
+  }
+
+  .widget-user-image {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -45px;
+
+    > img {
+      width: 90px;
+      height: auto;
+      border: 3px solid $white;
+    }
+  }
+
+  .user-wideget-footer {
+    padding-top: 30px;
+  }
+}
+
+.user-wideget-footer {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid #f4f4f4;
+  padding: 10px;
+  background-color: $white;
+}
+
+.user-wideget .border-right {
+  border-right: 1px solid #f4f4f4;
+}
+
+.description-block {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+
+  > {
+    .description-header {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .description-text {
+      text-transform: uppercase;
+      color: #a3b1c9;
+    }
+  }
+}

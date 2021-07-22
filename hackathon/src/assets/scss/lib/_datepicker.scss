@@ -1,0 +1,100 @@
+/* ###### 3.2 Datepicker ###### */
+
+.ui-datepicker {
+  background-color: $white;
+  border: 1px solid rgba(28, 39, 60, 0.2);
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px;
+  margin: 1px 0 0;
+  display: none;
+  width: auto !important;
+  z-index: 5 !important;
+
+  .ui-datepicker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $default-color;
+    padding: 0 0 5px;
+    letter-spacing: 1px;
+    border: 0;
+    background-color: transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    .ui-datepicker-next, .ui-datepicker-prev {
+      text-indent: -99999px;
+      color: $gray-600;
+      top: 3px;
+    }
+
+    .ui-datepicker-next::before, .ui-datepicker-prev::before {
+      font-size: 16px;
+      font-family: 'Ionicons';
+      position: absolute;
+      top: -2px;
+      text-indent: 0;
+    }
+
+    .ui-datepicker-next {
+      &:hover::before, &:focus::before {
+        color: $gray-800;
+      }
+    }
+
+    .ui-datepicker-prev {
+      &:hover::before, &:focus::before {
+        color: $gray-800;
+      }
+    }
+
+    .ui-datepicker-next {
+      order: 3;
+
+      &:before {
+        right: 5px;
+        content: '\f3d1';
+      }
+    }
+
+    .ui-datepicker-prev:before {
+      left: 5px;
+      content: '\f3cf';
+    }
+
+    .ui-datepicker-next-hover, .ui-datepicker-prev-hover {
+      color: $gray-700;
+      cursor: pointer;
+      top: 1px;
+      border: 0;
+      background-color: transparent;
+    }
+  }
+
+  .ui-datepicker-title {
+    color: $gray-800;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .ui-datepicker-calendar {
+    margin: 0;
+    background-color: transparent;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    th {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 9px;
+      color: $gray-800;
+    }
+  }
+}

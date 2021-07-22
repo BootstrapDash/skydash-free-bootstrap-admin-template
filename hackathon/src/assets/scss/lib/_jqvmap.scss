@@ -1,0 +1,451 @@
+/* ###### 4.4 jQVMap ###### */
+
+.jqvmap-label {
+  padding: 2px 8px;
+  background-color: rgba(17, 17, 17, 0.9);
+  border-radius: 2px;
+}
+
+.jqvmap-zoomin {
+  font-size: 20px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.jqvmap-zoomout {
+  font-size: 20px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  top: 32px;
+}
+
+/* Setup basic CSS for Label */
+
+.jqvmap-pin {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Hide Whichever Labels you want */
+
+#jqvmap1_ri_pin, #jqvmap1_dc_pin, #jqvmap1_de_pin, #jqvmap1_md_pin {
+  display: none;
+}
+
+/* Reposition Labels that are not quite right ( labels are centered in shape, and sometimes need tweaking ) */
+
+#jqvmap1_ak_pin {
+  margin-top: -2%;
+}
+
+#jqvmap1_ca_pin {
+  margin-left: -2%;
+}
+
+#jqvmap1_ct_pin {
+  margin-top: -0.25%;
+  margin-left: -0.25%;
+}
+
+#jqvmap1_fl_pin {
+  margin-left: 5%;
+}
+
+#jqvmap1_id_pin {
+  margin-top: 3%;
+  margin-left: -1%;
+}
+
+#jqvmap1_ky_pin {
+  margin-left: 2%;
+}
+
+#jqvmap1_la_pin {
+  margin-left: -2%;
+}
+
+#jqvmap1_mi_pin {
+  margin-top: 4%;
+  margin-left: 3%;
+}
+
+#jqvmap1_ma_pin {
+  margin-top: -0.25%;
+}
+
+#jqvmap1_mn_pin {
+  margin-top: 2%;
+  margin-left: -2%;
+}
+
+#jqvmap1_nh_pin {
+  margin-top: 1%;
+  margin-left: -0.25%;
+}
+
+#jqvmap1_nj_pin {
+  margin-top: 1%;
+}
+
+#jqvmap1_ok_pin, #jqvmap1_va_pin {
+  margin-left: 2%;
+}
+
+#jqvmap1_wv_pin {
+  margin-left: -1%;
+  margin-top: 1%;
+}
+
+/* Add responsibe support to resize labels for difference screen sizes */
+
+@media only screen and (min-width: 320px) {
+  .jqvmap-pin {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .jqvmap-pin {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .jqvmap-pin {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .jqvmap-pin {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .jqvmap-pin {
+    font-size: 14px;
+  }
+}
+
+.jqstooltip {
+  width: 20px;
+}
+
+/* ###### 4.7 Quill ###### */
+
+.ql-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-wrapper-modal .ql-snow {
+  &.ql-toolbar {
+    border-width: 0;
+    border-bottom-width: 1px;
+  }
+
+  &.ql-container {
+    border-width: 0;
+  }
+
+  .ql-editor {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .ql-wrapper-modal .ql-snow.ql-toolbar {
+    padding: 15px 20px;
+  }
+}
+
+.ql-bubble {
+  &.ql-container {
+    border: 1px solid #dee4f3;
+
+    &:not(.ql-disabled) a::before {
+      background-color: $gray-900;
+      border-radius: 2px;
+    }
+  }
+
+  .ql-tooltip {
+    background-color: $gray-900;
+    border-radius: 2px;
+
+    &.ql-flip .ql-tooltip-arrow {
+      border-top-color: $gray-900;
+    }
+
+    &:not(.ql-flip) .ql-tooltip-arrow {
+      border-bottom-color: $gray-900;
+    }
+  }
+
+  .ql-toolbar {
+    padding: 0 8px 8px;
+
+    button {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8896af;
+      outline: none;
+
+      i {
+        font-size: 24px;
+        line-height: 0;
+        display: inline-block;
+
+        &.la-bold, &.la-underline {
+          width: 21px;
+        }
+      }
+
+      .ql-fill {
+        fill: #8896af;
+      }
+
+      .ql-stroke {
+        stroke: #8896af;
+      }
+
+      &.ql-active {
+        color: $white;
+        background-color: $white-08;
+      }
+    }
+
+    .ql-formats {
+      margin: 8px 8px 0 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .ql-bubble .ql-toolbar .ql-formats {
+    margin: 8px 0 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.ql-snow {
+  &.ql-container {
+    border-color: #dee4f3;
+    border-width: 1px;
+  }
+
+  &.ql-toolbar {
+    border-color: #dee4f3;
+    border-width: 1px;
+    border-bottom-width: 1px;
+    padding: 5px 10px 10px;
+
+    .ql-picker-label {
+      border-color:$gray-400;
+
+      &.ql-active {
+        background-color: $gray-200;
+        border-color: transparent;
+        color: $gray-900;
+        font-weight: 500;
+
+        .ql-stroke {
+          stroke: $default-color;
+        }
+      }
+    }
+
+    button {
+      border: 1px solid transparent;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $default-color;
+      outline: none;
+
+      svg {
+        width: 20px;
+        float: none;
+      }
+
+      i {
+        font-size: 24px;
+        line-height: 0;
+        display: inline-block;
+
+        &.la-bold, &.la-underline {
+          width: 21px;
+        }
+      }
+
+      .ql-stroke {
+        stroke-width: 2px;
+      }
+
+      &:hover, &:focus {
+        border-color:$gray-400;
+        color: #063598;
+      }
+
+      &:hover .ql-stroke, &:focus .ql-stroke {
+        stroke: $gray-600;
+      }
+
+      &.ql-active {
+        background-color: $gray-200;
+        color: $gray-800;
+        border-color: transparent;
+
+        .ql-fill {
+          fill: $gray-800;
+        }
+
+        .ql-stroke {
+          stroke: $gray-800;
+        }
+      }
+    }
+
+    .ql-formats {
+      margin-top: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  .ql-formats button + button {
+    margin: 0 0 0 2px;
+  }
+
+  .ql-picker {
+    display: block;
+    border-width: 0;
+    height: 32px;
+    color: $gray-700;
+
+    &:not(.ql-color-picker):not(.ql-icon-picker) svg {
+      right: 3px;
+    }
+
+    &:hover .ql-picker-label, &:focus .ql-picker-label {
+      color: $gray-900;
+    }
+
+    &:hover .ql-picker-label .ql-stroke, &:focus .ql-picker-label .ql-stroke {
+      stroke: $default-color;
+    }
+
+    &.ql-header {
+      width: 120px;
+    }
+  }
+
+  .ql-picker-label {
+    display: block;
+    padding-left: 10px;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    border: 1px solid $border;
+    background-color: $white;
+    outline: none;
+
+    &::before {
+      line-height: 2.25;
+      font-weight: 400;
+    }
+  }
+
+  .ql-stroke {
+    stroke: $default-color;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    stroke-width: 1;
+  }
+
+  .ql-editor {
+    padding: 20px;
+    color: $gray-800;
+  }
+}
+
+@media (min-width: 576px) {
+  .ql-snow.ql-toolbar {
+    padding: 15px;
+  }
+}
+
+.ql-wrapper-demo {
+  background-color: $white;
+
+  .ql-container {
+    height: 250px;
+  }
+
+  .ql-editor {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ql-wrapper-demo {
+    width: 100%;
+  }
+}
+
+.ql-scrolling-demo {
+  background-color: $white;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid $gray-200;
+  position: relative;
+
+  .ql-container {
+    border-width: 0;
+    height: auto;
+    min-height: 100%;
+    padding: 30px;
+
+    .ql-editor {
+      font-size: 16px;
+      overflow-y: visible;
+      color: $gray-800;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ql-scrolling-demo {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ql-scrolling-demo .ql-container {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,143 @@
+/*-- rating--*/
+
+.rating-stars {
+  width: 100%;
+  text-align: center;
+
+  .rating-stars-container {
+    font-size: 0px;
+
+    .rating-star {
+      display: inline-block;
+      font-size: 26px;
+      cursor: pointer;
+      padding: 4px 8px;
+      color: #e1e6f1;
+
+      &.is--active .fa-heart, &.is--hover .fa-heart {
+        color: #fb0d00;
+      }
+
+      &.sm {
+        display: inline-block;
+        font-size: 14px;
+        color: #eaedf1;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      &.is--active, &.is--hover {
+        color: #f1c40f;
+      }
+
+      &.is--no-hover, .fa-heart .is--no-hover {
+        color: $border;
+      }
+
+      &.is--active, &.is--hover {
+        color: #f1c40f;
+      }
+    }
+  }
+}
+
+/*-----Br Themes-----*/
+
+.br-theme-bars-horizontal .br-widget {
+  a {
+    background-color: #e1e6f1;
+
+    &.br-active, &.br-selected {
+      background-color: $primary;
+    }
+  }
+
+  .br-current-rating {
+    color: $primary;
+  }
+}
+
+.br-theme-bars-pill .br-widget a {
+  background-color: #e1e6f1;
+
+  &.br-active, &.br-selected {
+    background-color: $primary;
+    color: white;
+  }
+
+  color: $primary;
+}
+
+.br-theme-bars-square .br-widget a {
+  &.br-active, &.br-selected {
+    border: 2px solid #e1e6f1;
+    color: $primary;
+  }
+
+  border: 2px solid #e1e6f1;
+  background-color: $white;
+  color: #334151;
+}
+
+.br-theme-bars-movie .br-widget {
+  a {
+    &.br-active, &.br-selected {
+      background-color: $primary;
+    }
+
+    background-color: #e1e6f1;
+  }
+
+  .br-current-rating {
+    color: $primary;
+  }
+}
+
+.br-theme-bars-1to10 .br-widget {
+  a {
+    background-color: #e1e6f1;
+
+    &.br-active, &.br-selected {
+      background-color: $primary;
+    }
+  }
+
+  .br-current-rating {
+    color: $primary;
+  }
+}
+
+.br-theme-fontawesome-stars .br-widget a {
+  &.br-active:after, &.br-selected:after {
+    color: $primary;
+  }
+}
+
+/*-----Br Themes-----*/
+
+.rating-stars input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #495057;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid #eaedf1;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.rating-table {
+  &.table {
+    th, td {
+      padding: 7px 6px !important;
+      line-height: 1.462;
+    }
+  }
+
+  tr {
+    padding: 10px 0;
+  }
+}

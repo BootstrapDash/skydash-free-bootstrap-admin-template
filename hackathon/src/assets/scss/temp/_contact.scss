@@ -1,0 +1,484 @@
+/* ###### 7.4 Contacts  ###### */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main-content-body-show {
+    .main-header-contacts .main-header-menu-icon {
+      display: flex;
+    }
+
+    .main-content-left-contacts {
+      display: block;
+    }
+  }
+}
+
+.main-content-left-contacts {
+  width: 100%;
+  display: block;
+  padding: 0;
+
+  .main-content-breadcrumb, .main-content-title {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content-left-contacts {
+    border-right: 1px solid $border;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content-left-contacts {
+    .main-content-breadcrumb, .main-content-title {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-contacts-list {
+    height: 730px;
+    position: relative;
+  }
+}
+
+.main-contact-label {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  color: $gray-500;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid $border;
+    z-index: 5;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-label {
+    padding-left: 30px;
+  }
+}
+
+.main-contact-item {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-right-width: 0;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+
+  + .main-contact-item {
+    margin-top: -1px;
+    border-top-color: $gray-200;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 65px;
+      right: 0;
+      border-top: 1px solid $gray-200;
+    }
+  }
+
+  &:hover, &:focus {
+    background-color: $gray-100;
+    border-top-color: $gray-200;
+    border-bottom-color: $gray-200;
+  }
+
+  &.selected {
+    z-index: 1;
+    border-left-color: $primary;
+    border-top-color: $gray-200;
+    border-bottom-color: $gray-200;
+    background-color: $gray-100;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-item {
+    padding: 10px 15px;
+  }
+}
+
+.main-contact-body {
+  flex: 1;
+  margin-left: 15px;
+
+  h6 {
+    color: $gray-900;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  span {
+    font-size: 13px;
+    color: $gray-600;
+  }
+}
+
+.main-contact-star {
+  font-size: 16px;
+  color: $gray-500;
+
+  &:hover, &:focus {
+    color: $gray-600;
+  }
+
+  &.active {
+    color: $warning;
+  }
+}
+
+.main-content-body-contacts {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-content-body-contacts {
+    display: block;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content-body-contacts {
+    overflow: visible;
+  }
+}
+
+.main-contact-info-header {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border;
+  position: relative;
+
+  .media {
+    display: block;
+  }
+
+  .main-img-user {
+    width: 100px;
+    height: 100px;
+
+    a {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: $gray-600;
+      color: $white;
+      font-size: 18px;
+      line-height: .9;
+      box-shadow: 0 0 0 2px $white;
+      border-radius: 100%;
+
+      &:hover, &:focus {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .media-body {
+    margin-top: 30px;
+
+    h4 {
+      color: $gray-900;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    p {
+      color: $default-color;
+      margin-bottom: 15px;
+    }
+
+    .nav-link {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      color: $gray-600;
+      font-size: 13px;
+
+      i {
+        font-size: 0.875rem;
+        line-height: 0;
+        margin-right: 5px;
+
+        &.typcn {
+          line-height: .9;
+
+          &::before {
+            width: auto;
+          }
+        }
+      }
+
+      &:hover, &:focus {
+        color: $primary;
+      }
+
+      + .nav-link {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .main-contact-info-header {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-header {
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-header .media {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-header .media-body {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-contact-info-header .media-body .nav-link {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-contact-info-header .media-body .nav-link i {
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-contact-info-header .media-body .nav-link + .nav-link {
+    margin-left: 25px;
+  }
+}
+
+.main-contact-action {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $gray-600;
+    font-size: 12px;
+
+    &:hover, &:focus {
+      color: $primary;
+    }
+
+    i {
+      font-size: 21px;
+      line-height: .5;
+    }
+
+    + a {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-action {
+    right: 20px;
+  }
+}
+
+.main-contact-info-body {
+  padding-left: 20px;
+
+  .media-list {
+    padding: 20px 0;
+  }
+
+  .media {
+    align-items: center;
+    position: relative;
+
+    + .media {
+      margin-top: 30px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -19px;
+        right: 0;
+        border-top: 1px dotted $gray-300;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  .media-icon {
+    font-size: 32px;
+    color: $gray-500;
+    line-height: 1;
+    width: 40px;
+    text-align: center;
+  }
+
+  .media-body {
+    margin-left: 0;
+
+    > div + div {
+      margin-top: 15px;
+    }
+
+    label {
+      color: $gray-600;
+      margin-bottom: 0;
+      display: block;
+      font-size: 13px;
+    }
+
+    span {
+      display: block;
+      color: $gray-900;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body {
+    height: calc(100% - 126px);
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body .media-list {
+    padding: 25px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body .media-icon {
+    width: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body .media-body {
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body .media-body > div {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body .media-body > div + div {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-contact-info-body {
+    height: calc(100% - 126px);
+    position: relative;
+  }
+}
+
+.main-contact-info-header .main-img-user img {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.contact-icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .main-contacts-list {
+    height: 627px;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-contacts-list {
+    height: 600px;
+    position: relative;
+  }
+}
+
+.main-contact-item .main-img-user::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #17b86a;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95);
+  border-radius: 100%;
+  bottom: 3px;
+  display: block !important;
+}
+
+.main-content-body-contacts .main-contact-info-header .main-img-user::after {
+  display: none !important;
+}
+
+.contact-icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}

@@ -1,0 +1,378 @@
+.SumoSelect p {
+	margin: 0;
+}
+.SumoSelect {
+	width: 200px;
+}
+.SelectBox {
+	padding: 5px 8px;
+}
+.sumoStopScroll {
+	overflow: hidden;
+}
+/* Filtering style */
+
+.SumoSelect .hidden {
+	display: none;
+}
+.SumoSelect .search-txt {
+	display: none;
+	outline: none;
+}
+.SumoSelect .no-match {
+	display: none;
+	padding: 6px;
+}
+.SumoSelect.open .search-txt {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 5px 8px;
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+.SumoSelect.open>.search>span, .SumoSelect.open>.search>label {
+	visibility: hidden;
+}
+/*this is applied on that hidden select. DO NOT USE display:none; or visiblity:hidden; and Do not override any of these properties. */
+
+.SelectClass, .SumoUnder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+.SelectClass {
+	z-index: 1;
+}
+.SumoSelect>.optWrapper>.options li.opt label, .SumoSelect>.CaptionCont, .SumoSelect .select-all>label {
+	user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+.SumoSelect {
+	display: inline-block;
+	position: relative;
+	outline: none;
+	width: 100%;
+}
+.SumoSelect:focus>.CaptionCont{
+	border-color: #99a6b7;
+}
+.SumoSelect>.CaptionCont {
+	position: relative;
+    border: 1px solid #e1e6f1;
+    color: #99a6b7;
+    min-height: 14px;
+    background-color: #fff;
+    border-radius: 0;
+    margin: 0;
+    height: 40px;
+    line-height: 30px;
+
+}
+.SumoSelect>.CaptionCont>span {
+	display: block;
+	padding-right: 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+}
+/*placeholder style*/
+
+.SumoSelect>.CaptionCont>span.placeholder {
+	color: #e1e6f1;
+}
+.SumoSelect>.CaptionCont>label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+}
+.SumoSelect>.CaptionCont>label>i:before {
+	display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+	margin-top: 17px;
+}
+.SumoSelect>.optWrapper {
+	display: none;
+	z-index: 9;
+	top: 30px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #fff;
+	overflow: hidden;
+}
+.SumoSelect.open>.optWrapper {
+	top: 35px;
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(162, 169, 204,.24);
+    border: 1px solid #e1e6f1;
+    margin: 0;
+    padding: 0;
+}
+.SumoSelect.open>.optWrapper.up {
+	top: auto;
+	bottom: 100%;
+	margin-bottom: 5px;
+}
+.SumoSelect>.optWrapper ul {
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+.SumoSelect>.optWrapper>.options {
+	border-radius: 2px;
+	position: relative;
+	/*Set the height of pop up here (only for desktop mode)*/
+	max-height: 250px;
+	/*height*/
+}
+.SumoSelect>.optWrapper.okCancelInMulti>.options {
+	border-radius: 2px 2px 0 0;
+}
+.SumoSelect>.optWrapper.selall>.options {
+	border-radius: 0 0 2px 2px;
+}
+.SumoSelect>.optWrapper.selall.okCancelInMulti>.options {
+	border-radius: 0;
+}
+.SumoSelect>.optWrapper>.options li.group.disabled>label {
+	opacity: 0.5;
+}
+.SumoSelect>.optWrapper>.options li ul li.opt {
+	padding-left: 22px;
+}
+.SumoSelect>.optWrapper.multiple>.options li ul li.opt {
+	padding-left: 50px;
+}
+.SumoSelect>.optWrapper.isFloating>.options {
+	max-height: 100%;
+}
+.SumoSelect>.optWrapper>.options li.opt {
+	padding: 8px 15px;
+    position: relative;
+    border-bottom: 1px solid #e1e6f1;
+}
+.SumoSelect>.optWrapper>.options>li.opt:first-child {
+	border-radius: 2px 2px 0 0;
+}
+.SumoSelect>.optWrapper.selall>.options>li.opt:first-child {
+	border-radius: 0;
+}
+.SumoSelect>.optWrapper>.options>li.opt:last-child {
+	border-radius: 0 0 2px 2px;
+	border-bottom: none;
+}
+.SumoSelect>.optWrapper.okCancelInMulti>.options>li.opt:last-child {
+	border-radius: 0;
+}
+.SumoSelect>.optWrapper>.options li.opt:hover {
+	background-color: #ecf0fa;
+}
+.SumoSelect>.optWrapper>.options li.opt.sel, .SumoSelect .select-all.sel {
+	background-color: #a1c0e4;
+}
+.SumoSelect>.optWrapper>.options li label {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+	margin-bottom: 0 !important;
+}
+.SumoSelect>.optWrapper>.options li span {
+	display: none;
+}
+.SumoSelect>.optWrapper>.options li.group>label {
+	cursor: default;
+	padding: 8px 6px;
+	font-weight: bold;
+}
+/*Floating styles*/
+
+.SumoSelect>.optWrapper.isFloating {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	bottom: 0;
+	margin: auto;
+	max-height: 90%;
+}
+/*disabled state*/
+
+.SumoSelect>.optWrapper>.options li.opt.disabled {
+	background-color: inherit;
+	pointer-events: none;
+}
+.SumoSelect>.optWrapper>.options li.opt.disabled * {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	/* IE 5-7 */
+	filter: alpha(opacity=50);
+	/* Netscape */
+	-moz-opacity: 0.5;
+	/* Safari 1.x */
+	-khtml-opacity: 0.5;
+	/* Good browsers */
+	opacity: 0.5;
+}
+/*styling for multiple select*/
+
+.SumoSelect>.optWrapper.multiple>.options li.opt {
+	padding-right: 35px;
+	cursor: pointer;
+}
+.SumoSelect>.optWrapper.multiple>.options li.opt span, .SumoSelect .select-all>span {
+	position: absolute;
+	display: block;
+	width: 30px;
+	top: 0;
+	bottom: 0;
+	margin-right: -35px;
+}
+.SumoSelect>.optWrapper.multiple>.options li.opt span i, .SumoSelect .select-all>span i {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #e1e6f1;
+	border-radius: 2px;
+	background-color: #fff;
+}
+.SumoSelect>.optWrapper>.MultiControls {
+	display: none;
+	border-top: 1px solid #e1e6f1;
+	background-color: #fff;
+	border-radius: 0 0 3px 3px;
+}
+.SumoSelect>.optWrapper.multiple.isFloating>.MultiControls {
+	display: block;
+	margin-top: 5px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.SumoSelect>.optWrapper.multiple.okCancelInMulti>.MultiControls {
+	display: block;
+}
+.SumoSelect>.optWrapper.multiple.okCancelInMulti>.MultiControls>p {
+	padding: 6px;
+}
+.SumoSelect>.optWrapper.multiple.okCancelInMulti>.MultiControls>p:focus {
+	border-color: #0162e8;
+	outline: none;
+	background-color: #0162e8;
+}
+.SumoSelect>.optWrapper.multiple>.MultiControls>p {
+	display: inline-block;
+	cursor: pointer;
+	padding: 12px;
+	width: 50%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.SumoSelect>.optWrapper.multiple>.MultiControls>p:hover {
+	background-color: #e7ecf6;
+}
+.SumoSelect>.optWrapper.multiple>.MultiControls>p.btnOk {
+	border-right: 1px solid #e7ecf6;
+	border-radius: 0 0 0 3px;
+}
+.SumoSelect>.optWrapper.multiple>.MultiControls>p.btnCancel {
+	border-radius: 0 0 3px 0;
+}
+/*styling for select on popup mode*/
+
+.SumoSelect>.optWrapper.isFloating>.options li.opt {
+	padding: 12px 6px;
+}
+/*styling for only multiple select on popup mode*/
+
+.SumoSelect>.optWrapper.multiple.isFloating>.options li.opt {
+	padding-left: 35px;
+}
+.SumoSelect>.optWrapper.multiple.isFloating {
+	padding-bottom: 43px;
+}
+.SumoSelect>.optWrapper.multiple>.options li.opt.selected span i, .SumoSelect .select-all.selected>span i, .SumoSelect .select-all.partial>span i {
+	background-color: #0162e8;
+	box-shadow: none;
+	border-color: transparent;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAABMSURBVAiZfc0xDkAAFIPhd2Kr1WRjcAExuIgzGUTIZ/AkImjSofnbNBAfHvzAHjOKNzhiQ42IDFXCDivaaxAJd0xYshT3QqBxqnxeHvhunpu23xnmAAAAAElFTkSuQmCC');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/*disabled state*/
+
+.SumoSelect.disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+.SumoSelect.disabled>.CaptionCont {
+	border-color: #e1e6f1;
+	box-shadow: none;
+}
+/**Select all button**/
+
+.SumoSelect .select-all {
+	border-radius: 3px 3px 0 0;
+	position: relative;
+	border-bottom: 1px solid #e1e6f1;
+	background-color: #fff;
+	padding: 8px 0 3px 35px;
+	height: 36px;
+	cursor: pointer;
+}
+.SumoSelect .select-all>label, .SumoSelect .select-all>span i {
+	cursor: pointer;
+}
+.SumoSelect .select-all.partial>span i {
+	background-color: #e1e6f1;
+}
+/*styling for optgroups*/
+
+.SumoSelect>.optWrapper>.options li.optGroup {
+	padding-left: 5px;
+	text-decoration: underline;
+}

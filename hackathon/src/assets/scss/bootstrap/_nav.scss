@@ -1,0 +1,527 @@
+/* ###### 3.10 Nav ###### */
+
+.nav-link {
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.nav-pills .nav-link {
+  color: $gray-700;
+
+  &:hover, &:focus {
+    color: $gray-900;
+  }
+
+  &.active {
+    border-radius: 3px;
+    background-color: $primary;
+
+    &:hover, &:focus {
+      color: $white;
+    }
+  }
+}
+
+.nav-dark .nav-link {
+  color: $gray-500;
+
+  &:hover, &:focus {
+    color: $white;
+  }
+}
+
+.nav-tabs {
+  border-bottom-width: 0;
+
+  .nav-link {
+    background-color: $white-5;
+    border-width: 0;
+    border-radius: 0;
+    padding: 10px 15px;
+    line-height: 1.428;
+    color: $gray-700;
+
+    &:hover, &:focus {
+      background-color: $white-5;
+      color: $gray-900;
+    }
+
+    + .nav-link {
+      margin-left: 3px;
+    }
+
+    &.active {
+      background-color: $white;
+      color: $gray-900;
+      font-weight: 500;
+      letter-spacing: -.1px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-tabs .nav-link {
+    padding: 10px 20px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: $gray-600;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.latest-tasks .nav-tabs {
+   border-bottom:0;
+}
+.nav-tabs {
+  border-bottom: 1px solid $border;
+
+  .nav-item {
+    margin-bottom: -1px;
+  }
+
+  .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &:hover, &:focus {
+      border-color: $gray-200 $gray-200 $gray-300;
+    }
+
+    &.disabled {
+      color: $gray-600;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.active {
+      color: $gray-700;
+      background-color: $white;
+      border-color:$white;
+    }
+  }
+
+  .nav-item.show .nav-link {
+    color: $gray-700;
+    background-color: $white;
+    border-color: $gray-300  $gray-300  $white;
+  }
+
+  .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    border-radius: 3px;
+
+    &.active {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  .show > .nav-link {
+    color: $white;
+    background-color: $primary;
+  }
+}
+
+.nav-fill .nav-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-justified .nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tab-content > {
+  .tab-pane {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}
+
+/* ###### 5.7 Nav   ###### */
+
+@media (min-width: 768px) {
+  .main-nav {
+    align-items: center;
+  }
+}
+
+.main-nav .nav-link {
+  display: block;
+  color: $gray-700;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+
+  &:hover, &:focus {
+    color: $gray-900;
+  }
+
+  + .nav-link {
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid $gray-500;
+  }
+
+  &.active {
+    color: $primary !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav .nav-link + .nav-link {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid $gray-500;
+  }
+}
+
+.main-nav-column {
+  flex-direction: column;
+
+  .nav-link {
+    padding: 0;
+    height: 38px;
+    color: $gray-900;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    i {
+      font-size: 24px;
+      line-height: 0;
+      width: 24px;
+      margin-right: 12px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+
+      &:not([class*=' tx-']) {
+        color: $gray-600;
+      }
+
+      &.typcn {
+        line-height: .9;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 11px;
+      color: $gray-500;
+      margin-left: auto;
+    }
+
+    &:hover, &:focus, &:hover i:not([class*=' tx-']), &:focus i:not([class*=' tx-']) {
+      color: $gray-900;
+    }
+
+    &.active {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: -28px;
+        width: 3px;
+        background-color: $primary;
+        border-radius: 3px;
+        display: none;
+      }
+
+      color: $primary;
+
+      &:hover, &:focus, i, &:hover i, &:focus i {
+        color: $primary;
+      }
+    }
+
+    + .nav-link {
+      border-top: 1px dotted$gray-400;
+    }
+  }
+
+  &.sm .nav-link {
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 10px 0;
+
+    i {
+      font-size: 21px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav-column .nav-link i {
+    transition: none;
+  }
+}
+
+.main-nav-dark .nav-link {
+  color: $white-7;
+
+  &:hover, &:focus {
+    color: $white;
+  }
+
+  + .nav-link {
+    border-color: $gray-700;
+  }
+
+  &.active {
+    color: $primary;
+  }
+}
+
+.main-nav-colored-bg .nav-link {
+  + .nav-link {
+    border-color: $white-4;
+  }
+
+  &.active {
+    color: $white !important;
+  }
+}
+
+.main-nav-line {
+  position: relative;
+
+  .nav-link {
+    padding: 0;
+    color: $gray-700;
+    position: relative;
+
+    &:hover, &:focus {
+      color: $gray-900;
+    }
+
+    padding: 0px 10px 0px 10px;
+    color: #37326d;
+    position: relative;
+
+    &.active {
+      color: $gray-900;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        width: 2px;
+        background-color: $primary;
+      }
+    }
+  }
+
+  &.main-nav-dark .nav-link {
+    color: $white-7;
+
+    &:hover, &:focus {
+      color: $white;
+    }
+
+    &.active {
+      color: $white;
+
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav-line .nav-link.active::before {
+    top: 37px;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: auto;
+  }
+}
+
+.main-nav-tabs {
+  padding: 15px 15px 0;
+  background-color: $gray-300;
+
+  .lSSlideOuter {
+    position: relative;
+    padding-left: 32px;
+    padding-right: 35px;
+  }
+
+  .lSSlideWrapper {
+    overflow: visible;
+  }
+
+  .lSAction > a {
+    display: block;
+    height: 40px;
+    top: 16px;
+    opacity: 1;
+    background-color:$gray-400;
+    background-image: none;
+
+    &:hover, &:focus {
+      background-color: #a5afc4;
+    }
+
+    &::before {
+      font-family: 'Ionicons';
+      font-size: 18px;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.lSPrev {
+      left: -32px;
+
+      &::before {
+        content: '\f3cf';
+      }
+    }
+
+    &.lSNext {
+      right: -35px;
+
+      &::before {
+        content: '\f3d1';
+      }
+    }
+
+    &.disabled {
+      background-color: $gray-200;
+      color: $white;
+    }
+  }
+
+  .lightSlider {
+    display: flex;
+  }
+
+  .tab-item {
+    flex-shrink: 0;
+    display: block;
+    float: none;
+    min-width: 150px;
+  }
+
+  .tab-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    line-height: 1.428;
+    color: $gray-700;
+    white-space: nowrap;
+    background-color: $gray-200;
+
+    &:hover, &:focus {
+      background-color: $gray-100;
+    }
+
+    &.active {
+      background-color: $white;
+      color: $gray-900;
+      font-weight: 500;
+    }
+  }
+}
+
+.main-tab-pane {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.nav .nav-item .dropdown-menu {
+  .dropdown-item.dropdown-header {
+    background: #1b2d8f;
+    height: 85px;
+    color: $white;
+  }
+
+  top: 46px;
+  border-radius: 6px;
+  min-width: 245px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2);
+  box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2);
+}
+
+.nav-link {
+  &.with-sub {
+    .angle {
+      right: 25px;
+      top: 18px;
+    }
+
+    .side-badge {
+      right: 44px;
+      position: absolute;
+    }
+  }
+
+  .side-badge {
+    right: 20px;
+    position: absolute;
+  }
+}
+
+.nav-sub-item .sub-angle {
+  right: 25px;
+  top: 18px;
+  margin-left: auto;
+  font-size: 11px;
+}
+
+.nav-wrapper.crypto .label {
+  font-weight: 500;
+}

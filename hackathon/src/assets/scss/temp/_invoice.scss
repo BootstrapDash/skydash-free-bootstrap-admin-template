@@ -1,0 +1,249 @@
+/* ###### 7.5 Invoice  ###### */
+
+.main-content-left-invoice {
+  display: block;
+  padding: 0;
+
+  .main-content-breadcrumb, .main-content-title {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-content-left-invoice {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content-left-invoice {
+    border-right: 1px solid $border;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content-left-invoice {
+    .main-content-breadcrumb, .main-content-title {
+      padding-left: 0;
+    }
+  }
+}
+
+.main-invoice-list {
+  position: relative;
+  border-top: 1px solid $border;
+
+  .media {
+    align-items: center;
+    border: 1px solid transparent;
+    border-right-width: 0;
+    padding: 10px 20px;
+    position: relative;
+
+    &:hover, &:focus {
+      cursor: pointer;
+      background-color: $gray-100;
+    }
+
+    + .media {
+      margin-top: -1px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 55px;
+        right: 0;
+        border-top: 1px dotted $gray-300;
+      }
+    }
+  }
+
+  .media-icon {
+    width: 24px;
+    text-align: center;
+    font-size: 32px;
+    color: $gray-500;
+  }
+
+  .media-body {
+    margin-left: 15px;
+
+    h6 {
+      font-weight: 500;
+      color: $gray-900;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span:last-child {
+        color: $primary;
+      }
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 11px;
+      font-family: Arial, sans-serif;
+      color: $gray-800;
+
+      span {
+        color: $gray-600;
+      }
+    }
+  }
+
+  .selected {
+    background-color: $gray-100;
+    border-top-color:$border;
+    border-bottom-color:$border;
+    border-left-color: $primary;
+
+    &:first-child {
+      border-top-color: transparent;
+    }
+  }
+}
+.card-invoice hr{
+	border-top:0 !important;
+}
+@media (min-width: 992px) {
+  .main-invoice-list {
+    height: calc(100% - 65px);
+  }
+}
+
+@media (min-width: 992px) {
+  .main-invoice-list .media {
+    padding: 10px 15px;
+  }
+}
+
+.main-content-body-invoice {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .main-content-body-invoice {
+    display: block;
+  }
+}
+
+.card-invoice {
+  background-color: transparent;
+  border-width: 0;
+
+  .card-body {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .invoice-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
+.invoice-title {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: $gray-300;
+  font-weight: 700;
+}
+
+.billed-from {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  h6 {
+    color: $gray-900;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .billed-from {
+    margin-top: 0;
+  }
+}
+
+.billed-to {
+  h6 {
+    color: $gray-900;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+
+.invoice-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  margin-bottom: 0;
+  font-size: 13px;
+
+  + .invoice-info-row {
+    border-top: 1px dotted $gray-300;
+  }
+
+  span:first-child {
+    color: $gray-700;
+  }
+}
+
+.table-invoice {
+  thead > tr > {
+    th, td {
+      font-size: 11px;
+      font-weight: 700;
+      color: $gray-600;
+    }
+  }
+
+  tbody > tr > {
+    th:first-child, td:first-child {
+      color: $gray-900;
+      font-weight: 500;
+    }
+
+    th:first-child .invoice-notes, td:first-child .invoice-notes {
+      margin-right: 20px;
+    }
+
+    th:first-child .invoice-notes .section-label-sm, td:first-child .invoice-notes .section-label-sm {
+      font-weight: 600;
+    }
+
+    th:first-child .invoice-notes p, td:first-child .invoice-notes p {
+      font-size: 13px;
+      font-weight: 400;
+      color: $default-color;
+    }
+  }
+
+  &.table thead {
+    th, td {
+      padding: 9px 15px;
+    }
+  }
+}

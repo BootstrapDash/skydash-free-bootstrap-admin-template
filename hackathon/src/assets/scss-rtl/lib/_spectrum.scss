@@ -1,0 +1,90 @@
+/* ###### 4.11 Spectrum ###### */
+
+.sp-container {
+  background-color: $white;
+  border-color: $gray-300;
+  z-index: 200;
+
+  button {
+    border: 0;
+    padding: 8px 15px;
+    background-image: none;
+    background-color: $gray-300;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 12px;
+    text-shadow: none;
+    text-transform: capitalize;
+    border-radius: 2px;
+
+    &:hover, &:focus {
+      border: 0;
+      background-image: none;
+      background-color: $gray-500;
+      text-shadow: none;
+    }
+  }
+}
+
+.sp-button-container .sp-cancel {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  text-transform: capitalize;
+  color: $gray-600 !important;
+
+  &:hover, &:focus {
+    color: $gray-800 !important;
+    text-decoration: none;
+  }
+}
+
+.sp-picker-container {
+  border-left: 0;
+}
+
+.sp-replacer {
+  border-color: $gray-300;
+  background-color: $white;
+
+  &:hover, &:focus {
+    border-color:$gray-400;
+  }
+
+  &.sp-active {
+    border-color: $gray-600;
+  }
+}
+
+.sp-dd {
+  text-indent: -99999px;
+  position: relative;
+  width: 10px;
+
+  &::before {
+    content: '\f280';
+    font-family: 'Ionicons';
+    font-size: 15px;
+    color: $gray-500;
+    position: absolute;
+    text-indent: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.sp-preview {
+  border: 0;
+}
+
+.sp-dragger {
+  background-color: transparent;
+}
+
+.sp-choose {
+  background-color: $gray-300;
+}
+
+.sp-palette .sp-thumb-el {
+  &:hover, &.sp-thumb-active {
+    border-color: $gray-800;
+  }
+}

@@ -1,0 +1,376 @@
+.badge {
+  font-size: 10px ;
+  font-weight: 500 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding: 3px 5px 4px !important;
+}
+
+.badge-light {
+  background-color: $gray-300;
+}
+
+.badge-pill {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/*////////////////////badgelight//////////////////*/
+
+.badge-primary-transparent {
+  color: $primary;
+  background-color: rgb(217, 232, 254);
+}
+
+.badge-success-transparent {
+  background-color: rgb(212, 242, 225) !important;
+  color: $success;
+}
+
+.badge-teal-transparent {
+  background-color: #d2f5f5 !important;
+  color: $teal;
+}
+
+.badge-warning-transparent {
+  background-color: rgba(255, 193, 7, 0.15) !important;
+  color: $warning;
+}
+
+.badge-danger-transparent {
+  color: $danger;
+  background-color: #f9e2e2;
+}
+
+.badge-purple-transparent {
+  color: $purple;
+  background-color: #e1defe;
+}
+
+.badge-info-transparent {
+  color: #0a7ffb;
+  background-color: rgba(3, 85, 208, 0.1);
+}
+
+.badge-pink-transparent {
+  color: $pink;
+  background-color: rgb(254, 229, 241);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge, .sp-container button .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+.badge-primary {
+  color: $white;
+  background-color: $primary;
+}
+
+a.badge-primary {
+  &:hover {
+    color: $white;
+    background-color: #0040ff;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #0040ff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(51, 102, 255, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(51, 102, 255, 0.5);
+  }
+}
+
+.badge-secondary {
+  color: $white;
+  background-color: $gray-600;
+}
+
+a.badge-secondary {
+  &:hover {
+    color: $white;
+    background-color: $gray-600;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $gray-600;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(121, 135, 161, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(121, 135, 161, 0.5);
+  }
+}
+
+.badge-success {
+  color: $white;
+  background-color: $success;
+}
+
+a.badge-success {
+  &:hover {
+    color: $white;
+    background-color: #2a7d01;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #2a7d01;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(59, 176, 1, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(59, 176, 1, 0.5);
+  }
+}
+
+.badge-info {
+  color: $white;
+  background-color: $info;
+}
+
+a.badge-info {
+  &:hover {
+    color: $white;
+    background-color: $info;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $info;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+}
+
+.badge-warning {
+  color: $gray-900;
+  background-color: $warning;
+}
+
+a.badge-warning {
+  &:hover, &:focus {
+    color: $gray-900;
+    background-color: #d39e00;
+  }
+}
+
+.badge-purple {
+  color: $white;
+  background-color: 7571f9;
+}
+
+a.badge-purple {
+  &:hover {
+    color: $white;
+    background-color: #6536bb;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #6536bb;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(101, 54, 187, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(101, 54, 187, 0.5);
+  }
+}
+
+.badge-teal {
+  color: $white;
+  background-color: $teal;
+}
+
+a {
+  &.badge-teal {
+    &:hover, &:focus {
+      color: $gray-900;
+      background-color: $teal;
+    }
+  }
+
+  &.badge-warning {
+    &:focus, &.focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+    }
+  }
+}
+
+.badge-danger {
+  color: $white;
+  background-color: $danger;
+}
+
+a.badge-danger {
+  &:hover {
+    color: $white;
+    background-color: #bd2130;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #bd2130;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+}
+
+.badge-pink {
+  color: $white;
+  background-color: $pink;
+}
+
+a.badge-pink {
+  &:hover {
+    color: $white;
+    background-color: #e20b73;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #e20b73;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(241, 0, 117, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(241, 0, 117, 0.5);
+  }
+}
+
+.badge-purple {
+  color: $white;
+  background-color: $purple;
+}
+
+a.badge-purple {
+  &:hover {
+    color: $white;
+    background-color: #582ea2;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #582ea2;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(103, 58, 183, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(103, 58, 183, 0.5);
+  }
+}
+
+.badge-light {
+  color: $gray-900;
+  background-color: $gray-100;
+}
+
+a.badge-light {
+  &:hover {
+    color: $gray-900;
+    background-color: #d5d9e4;
+  }
+
+  &:focus {
+    color: $gray-900;
+    background-color: #d5d9e4;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(244, 245, 248, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(244, 245, 248, 0.5);
+  }
+}
+
+.badge-dark {
+  color: $white;
+  background-color: $gray-800;
+}
+
+a.badge-dark {
+  &:hover {
+    color: $white;
+    background-color: #283143;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: #283143;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(59, 72, 99, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(59, 72, 99, 0.5);
+  }
+}
+
+@media print {
+  .badge {
+    border: 1px solid $black;
+  }
+}

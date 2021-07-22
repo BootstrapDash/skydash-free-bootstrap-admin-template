@@ -1,0 +1,67 @@
+.accordionjs {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+      box-shadow: 0px 0px 51px 0px rgba(122, 128, 144, 0.08), 0px 6px 18px 0px rgba(122, 128, 144, 0.05);
+}
+.accordionjs .acc_section {
+  border:1px solid  #eff2f7;
+  position: relative;
+  z-index: 10;
+  margin-top: -1px;
+  overflow: hidden;
+}
+.accordionjs .acc_section .acc_head {
+  position: relative;
+  background: #fff;
+  padding: 15px;
+  display: block;
+  cursor: pointer;
+}
+.accordionjs .acc_section .acc_head h3 {
+	line-height: 1;
+    margin: 5px;
+    font-size: 15px;
+}
+.accordionjs .acc_section .acc_content {
+	padding: 15px;
+	background: #fff;
+}
+.accordionjs .acc_section:first-of-type,
+.accordionjs .acc_section:first-of-type .acc_head {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.accordionjs .acc_section:last-of-type,
+.accordionjs .acc_section:last-of-type .acc_content {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.accordionjs .acc_section.acc_active > .acc_content {
+  display: block;
+}
+.accordionjs .acc_section.acc_active > .acc_head {
+    border-bottom: 1px solid #eff4fc;
+    color: #6a7882;
+}
+.accordionjs .acc_section.acc_active .acc_head h3:before{
+	content: "\e994";
+	position: absolute;
+	font-family: 'feather' !important;
+	right: 15px;
+	top: 17px;
+	font-size: 20px;
+	transition: all 0.5s;
+	transform: scale(1);
+}
+.accordionjs .acc_section .acc_head h3:before{
+	content:"\e9af";
+	position: absolute;
+	font-family: 'feather' !important;
+	right: 15px;
+	top: 17px;
+	font-size: 20px;
+	transition: all 0.5s;
+	transform: scale(1);
+}
